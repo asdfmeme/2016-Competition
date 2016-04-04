@@ -2,28 +2,24 @@ package org.usfirst.frc.team4576.robot.commands;
 
 import org.usfirst.frc.team4576.robot.Robot;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class AutoCheval extends Command {
 
+public class Climbing extends Command{
+
+	public Climbing()
+	{
+		requires(Robot.pneumatics);
+	}
 	@Override
 	protected void initialize() {
-		Robot.chassis.initAuto();
-
+		Robot.pneumatics.Climb();
+		//System.out.println("button pressed. value changing to: " + value);
 	}
 
 	@Override
 	protected void execute() {
-		//-,+ for forward, +,- for backwards
-		Robot.chassis.setLeftRight(-0.5, 0.5);
-		Timer.delay(1.5);
-		Robot.pneumatics.setTomahawks(true);
-		Robot.chassis.setLeftRight(-0.5, 0.5);
-		Timer.delay(2);
-		Robot.chassis.setLeftRight(0, 0);
-
-	}
+		    }
 
 	@Override
 	protected boolean isFinished() {
@@ -32,14 +28,14 @@ public class AutoCheval extends Command {
 
 	@Override
 	protected void end() {
-		Robot.chassis.setLeftRight(0, 0);
+		// TODO Auto-generated method stub
 		
-
 	}
 
 	@Override
 	protected void interrupted() {
-
+		// TODO Auto-generated method stub
+		
 	}
 
 }

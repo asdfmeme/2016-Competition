@@ -2,40 +2,42 @@ package org.usfirst.frc.team4576.robot.commands;
 
 import org.usfirst.frc.team4576.robot.Robot;
 
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class AutoRockWall extends Command {
+public class Push extends Command {
+	public Push(){
+		requires(Robot.pneumatics);
+	}
 
 	@Override
 	protected void initialize() {
-		Robot.chassis.initAuto();
+		// TODO Auto-generated method stub
+		Robot.pneumatics.push();
+		
 	}
 
 	@Override
 	protected void execute() {
-		//-,+ for forward, +,- for backwards
-		Robot.chassis.setLeftRight(-0.5,0.5);
-		Timer.delay(4.0);
-		Robot.chassis.setLeftRight(0, 0);
-
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	protected boolean isFinished() {
-
+		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	protected void end() {
-		Robot.chassis.setLeftRight(0, 0);
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	protected void interrupted() {
-
+		// TODO Auto-generated method stub
+		
 	}
 
 }
