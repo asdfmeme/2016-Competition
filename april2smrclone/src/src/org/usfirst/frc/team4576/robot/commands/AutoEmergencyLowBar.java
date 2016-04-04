@@ -5,7 +5,7 @@ import org.usfirst.frc.team4576.robot.Robot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
-public class AutoLowBar extends Command{
+public class AutoEmergencyLowBar extends Command {
 
 	@Override
 	protected void initialize() {
@@ -16,11 +16,8 @@ public class AutoLowBar extends Command{
 	@Override
 	protected void execute() {
 		//-,+ for forward, +,- for backwards
-		Robot.pneumatics.setTomahawks(true);
-		Robot.chassis.setLeftRight(0, 0);
-		Timer.delay(1);
-		Robot.chassis.setLeftRight(-0.5,0.5);
-		Timer.delay(3.5);
+		Robot.chassis.setLeftRight(0.65,-0.65);
+		Timer.delay(3);
 		Robot.chassis.setLeftRight(0, 0);
 
 		
@@ -43,3 +40,4 @@ public class AutoLowBar extends Command{
 	}
 
 }
+

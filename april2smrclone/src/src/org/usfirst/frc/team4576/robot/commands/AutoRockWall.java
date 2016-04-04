@@ -15,8 +15,8 @@ public class AutoRockWall extends Command {
 	@Override
 	protected void execute() {
 		//-,+ for forward, +,- for backwards
-		Robot.chassis.setLeftRight(-0.5,0.5);
-		Timer.delay(4.0);
+		Robot.chassis.setLeftRight(-0.65,0.65);
+		Timer.delay(5.0);
 		Robot.chassis.setLeftRight(0, 0);
 
 	}

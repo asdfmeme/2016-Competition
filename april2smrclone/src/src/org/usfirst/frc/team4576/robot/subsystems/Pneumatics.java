@@ -44,18 +44,14 @@ public class Pneumatics extends Subsystem {
 
 	}
 
-	public void setTomahawks(boolean closed) {
+	public void setNet(boolean closed) {
 		s1.set(closed);
-
 	}
 
-	public void tomahawks() {
+	public void net() {
 		s1.set(!s1.get());
 
 	}
-
-	
-
 	// public void toggleComp() {
 	// if (c.enabled())
 	// c.stop();

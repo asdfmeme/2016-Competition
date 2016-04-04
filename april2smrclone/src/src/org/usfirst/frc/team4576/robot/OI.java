@@ -1,7 +1,7 @@
 package org.usfirst.frc.team4576.robot;
 
 import org.usfirst.frc.team4576.robot.commands.ShooterWheel;
-import org.usfirst.frc.team4576.robot.commands.TomahawkControl;
+import org.usfirst.frc.team4576.robot.commands.Net;
 import org.usfirst.frc.team4576.robot.commands.Shift;
 import org.usfirst.frc.team4576.robot.commands.ShooterStop;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -46,9 +46,8 @@ public class OI {
 		ssLB.whenPressed(new ShooterWheel(false));
 		ssRB.whenReleased(new ShooterStop());
 		ssLB.whenReleased(new ShooterStop());
+		ssR3.whenPressed(new Net());
 		
-		dsX.whenPressed(new Shift());
-		dsRB.whenPressed(new TomahawkControl());
-		
+		dsX.whenPressed(new Shift());		
 	}
 }
